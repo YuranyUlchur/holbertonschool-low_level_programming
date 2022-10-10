@@ -9,12 +9,14 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	if ( num > 0.0)
+	double num;
+		printf("Enter a number: ");
+	scanf("%lf", &num);
+	if (num > 0.0)
 		printf("You entered a positive number.");
-	else if ( num < 0.0)
+	else if (num < 0.0)
 		printf("You entered a negative number.");
 	else
-		( num == 0.0)
 		printf("You entered 0");
 
 	return (0);
