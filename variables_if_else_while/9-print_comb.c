@@ -17,9 +17,10 @@ int main(void)
 	if (x < nine)
 	{
 		putchar(coma);
+		putchar(' ');
+
 	}
 
-		putchar(' ');
 
 
 	}
