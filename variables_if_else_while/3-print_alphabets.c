@@ -7,6 +7,7 @@
 int main(void)
 {
 	int x;
+
 	for (x = 'A'; x <= 'Z'; x++)
 	{
 		char small = tolower(x);
