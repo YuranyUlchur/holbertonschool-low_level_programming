@@ -6,12 +6,15 @@
  */
 int main(void)
 {
-int x;
-	for (x = 0; x <= 9; x++)
+	int x;
+	int zero = 48;
+	int nine = 57;
+
+	for (x = zero; x <= nine; x++)
 	{
 		putchar(x);
 
-}
-putchar('\n');
-return (0);
+	}
+	putchar('\n');
+	return (0);
 }
