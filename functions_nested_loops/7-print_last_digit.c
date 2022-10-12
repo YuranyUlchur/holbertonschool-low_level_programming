@@ -1,9 +1,10 @@
 #include "main.h"
 /**
- *print_las_digit-  prints last digit of integer input
+ *print_las _digit:  prints last digit of integer input
  *@n: value
  *Return: Always 0.
  */
+
 int print_last_digit(int n)
 {
 	int l;
