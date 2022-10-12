@@ -3,7 +3,7 @@
  *_islower- Entry point
  * @n: is the character received
  *
- * Return: Returns 1 and prints + if n is greater than zero Returns 0 and prints 0 if n is zero Returns -1 and prints - if n is less than zero
+ * Return: Returns 1  0 or -1
  */
 int print_sign(int n)
 
