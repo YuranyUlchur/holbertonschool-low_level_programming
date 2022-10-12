@@ -1,9 +1,6 @@
 #include "main.h"
 /**
  *jack_bauer- void every minute of jack bauer
- *@h: value the hours
- *@m: value the minutes
- *Return: Always 0.
  */
 void jack_bauer(void)
 {
