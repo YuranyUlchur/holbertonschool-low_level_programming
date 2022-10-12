@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- *_islower- Entry point
+ *_isalpha- Entry point
  * @c: is the character received
  *
  * Return: Returns 1 if c is lowercase Returns 0 otherwise
