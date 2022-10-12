@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- *_islower- Entry point
+ *print_sign- Entry point
  * @n: is the character received
  *
  * Return: Returns 1  0 or -1
