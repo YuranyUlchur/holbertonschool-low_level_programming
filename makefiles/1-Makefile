@@ -1,3 +1,4 @@
+all: CC SRC
 CC := gcc
 SRC := the .c files
 	gcc main.c school.c -o school
