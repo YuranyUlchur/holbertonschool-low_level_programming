@@ -1,6 +1,9 @@
 #include "main.h"
 /**
- *add- void every minute of jack bauer
+ *add- add two number
+ *@a:  value in integer
+ *@b: value in integer
+ *return- result the a and b
  */
 int add(int a, int b)
 {
