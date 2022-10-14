@@ -6,7 +6,9 @@ void more_numbers(void)
 {
 {
 	int x;
-	int j = *10;
+	int j;
+
+	j = *10;
 	{
 	for (x = '0' ; x <= '14'; x++)
 	{
