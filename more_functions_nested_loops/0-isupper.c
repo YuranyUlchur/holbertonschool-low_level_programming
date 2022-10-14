@@ -2,10 +2,10 @@
 #include <stdio.h>
 /**
  *_isupperr- Entry point
- * @c: is the character received
- *
- * Return: Returns 1 if c is lowercase Returns 0 otherwise
+ *@c: is the character received
+ *Return: Returns 1 if c is lowercase Returns 0 otherwise
  */
+
 int _isupper(int c)
 
 {
