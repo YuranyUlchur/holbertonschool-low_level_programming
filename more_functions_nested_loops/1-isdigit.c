@@ -12,7 +12,7 @@ int _isdigit(int c)
 {
 	return (1);
 }
-	if (c >= 'a' && c <= 'z')
+	if (c >= 'A' && c <= 'Z')
 {
 	return (0);
 }
