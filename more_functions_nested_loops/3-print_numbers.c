@@ -1,6 +1,7 @@
 #include "main.h"
 /**
  *print_numbers- printf the numbers
+ @x: value
  *Return: Return the numbers, from 0 to 9
  */
 void print_numbers(void)
