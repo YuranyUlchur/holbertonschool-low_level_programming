@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- *_isupperr- Returns a copy of this string converted to uppercase
+ *_isupper- Returns a copy of this string converted to uppercase
  *@c: Returns 1 if c is uppercase
  *Return: Returns 1 if c is lowercase Returns 0 otherwise
  */
