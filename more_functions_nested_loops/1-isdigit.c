@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- *_isupper- Returns a copy of this string converted to uppercase
+ *_isdigit- returns a nonzero value if c is a decimal digit 
  *@c: Returns 1 if c is uppercase
- *Return: Returns 1 if c is lowercase Returns 0 otherwise
+ *Return: Returns 1 if c is a digit Returns 0 otherwise
  */
 int _isdigit(int c)
 
