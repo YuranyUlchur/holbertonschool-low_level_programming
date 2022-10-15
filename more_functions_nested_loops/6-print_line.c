@@ -8,17 +8,20 @@ void print_line(int n)
 	int colum;
 	int caracter = 95;
 
-	for (colum = 0; colum <= n; colum++)
-
+	if (n <= 0)
 	{
-		_putchar(caracter);
+		_putchar('\n');
+	}
+	else
+	{
+		for (colum = 0; colum <= n; colum++)
+		{
+			_putchar(caracter);
+
+		}
+			_putchar('\n');
 	}
 
-	_putchar('\n');
 
-	if (n <= 0)
-{
-	_putchar('\n');
-}
 
 }
