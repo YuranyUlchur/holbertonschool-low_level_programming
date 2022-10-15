@@ -6,20 +6,11 @@
 void print_line(int n)
 {
 	int colum;
-	int caracter = 95;
 
-	if (n <= 0)
-	{
-		_putchar('\n');
-	}
-	else
-	{
-		for (colum = 0; colum <= n; n++)
+		for (colum = 0; colum <= n; colum++)
 		{
-			_putchar(caracter);
+			_putchar(_);
 
 		}
 			_putchar('\n');
-	}
-
 }
