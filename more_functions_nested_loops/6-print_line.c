@@ -14,14 +14,12 @@ void print_line(int n)
 	}
 	else
 	{
-		for (colum = 0; colum <= n; colum++)
+		for (colum = 0; colum <= n; n++)
 		{
 			_putchar(caracter);
 
 		}
 			_putchar('\n');
 	}
-
-
 
 }
