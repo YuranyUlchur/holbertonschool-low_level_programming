@@ -9,7 +9,7 @@ void print_line(int n)
 
 		for (colum = 0; colum <= n; colum++)
 		{
-			_putchar(_);
+			_putchar('_');
 
 		}
 			_putchar('\n');
