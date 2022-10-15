@@ -7,7 +7,7 @@ void print_line(int n)
 {
 	int colum;
 
-		for (colum = 0; colum <= n; colum++)
+		for (colum = 1; colum <= n; colum++)
 		{
 			_putchar('_');
 
