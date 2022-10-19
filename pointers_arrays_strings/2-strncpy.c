@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stddef.h>
 
 /**
  *_strncpy -  chain concatenates
@@ -22,8 +21,8 @@ char *_strncpy(char *dest, char *src, int n)
 
 	{
 		dest[i] = '\0';
-		i++;
+		
 	}
-
+		i++;
 	return (dest);
 }
