@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
  *cap_string- function is used capitalizes all words of a string
  *@a: value pointers
