@@ -1,34 +1,26 @@
 #include "main.h"
+#include <stdio.h>
 /**
  *cap_string- function is used capitalizes all words of a string
- *@pun: value pointers
+ *@a: value pointers
  *Return: Return value pointers
  */
-char *cap_string(char *pun)
+char *cap_string(char *a)
 
 {
 	int i;
 
-	for (i = 0; pun[i] != '\0'; i++)
+	if (a[0] >= 97 && a[0] <= 122)
 	{
-		if ((i = 0))
+		a[0] = -32;
+	}
+	for (i = 1; a[i] != '\0'; i++)
+	{
+		if (a[i - 1] == 32)
 		{
-			if ((pun[i] >= 'a' && pun[i] <= 'z'))
-				pun[i] = pun[i] - 32;
-		}
-		if (pun[i] == ' ')
-		{
-			++i;
-			if (pun[i] >= 'a' && pun[i] <= 'z')
+			if (a[i] >= 97 && a[i] <= 122)
 			{
-				pun[i] = pun[i] - 32;
-			}
-		}
-		else
-		{
-			if (pun[i] >= 'A' && pun[i] <= 'Z')
-			{
-				pun[i] = pun[i] + 32;
+				a[i] = -32;
 			}
 		}
 	}
