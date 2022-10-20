@@ -8,11 +8,12 @@ char *cap_string(char *pun)
 
 {
 	int i;
+	int num = 32;
 
 	for (i = 0; pun[i] != '\0'; i++)
 	{
-		if (pun[i] >= 'a')
-			pun[i] = pun[i];
+		if (pun[i] >= 'a' - num)
+			pun[i] = pun[i] - num;
 	}
 	return (pun);
 }
