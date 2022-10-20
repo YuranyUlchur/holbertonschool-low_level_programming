@@ -10,9 +10,9 @@ char *cap_string(char *a)
 {
 	int i;
 
-	if (a[0] >= 97 && a[0] <= 122)
+	if (a[i] >= 97 && a[i] <= 122)
 	{
-		a[0] = -32;
+		a[i] = -32;
 	}
 	for (i = 1; a[i] != '\0'; i++)
 	{
