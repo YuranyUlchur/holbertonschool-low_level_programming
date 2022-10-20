@@ -13,7 +13,7 @@ char *cap_string(char *pun)
 	for (i = 0; pun[i] != '\0'; i++)
 	{
 		if (pun[i] >= 'a' - num)
-			pun[i] = pun[i] - num;
+			pun[i] = pun[i];
 	}
 	return (pun);
 }
