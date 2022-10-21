@@ -4,7 +4,7 @@
  *_strpbrk -   string for any of a set of bytes
  *@s: value pointers
  *@accept: value pointers
- *Return: Return value 
+ *Return: Return value
  */
 
 char *_strpbrk(char *s, char *accept)
@@ -26,5 +26,5 @@ char *_strpbrk(char *s, char *accept)
 
 		return (s + i);
 	}
-	return ('\0');
+	return (0);
 }
