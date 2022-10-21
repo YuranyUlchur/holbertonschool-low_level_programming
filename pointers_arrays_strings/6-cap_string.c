@@ -5,17 +5,31 @@
  *@a: value pointers
  *Return: Return value pointers
  */
-char *cap_string(char *a)
-
+char cap_string(char *s)
 {
-	int i;
+	int i, j;
+	char e1[] = " \t\n,;.!?\"(){}";
 
-	if (a[i] >= 97 && a[i] <= 122)
+	i = 0;
+
+	if (s[0] >= 97 && s[0] <= 122)
+		s[0] -= 32;
+
+	while (s[i] != '\0')
 	{
-		a[i] = -32;
+		if (s[i + 1] >= 97 && s[i + 1] <= 122)
+		{
+			for (j = 0; e1[j] != '\0'; j++)
+			{
+				if (e1[j] == s[i])
+				{
+					s[i + 1] -= 32;
+					break;
+				}
+			}
+		}
+		i++;
 	}
-	for (i = 1; a[i] != '\0'; i++)
-	{
-		if (a[i - 1] == 32)
-	}
+
+	return (s);
 }
