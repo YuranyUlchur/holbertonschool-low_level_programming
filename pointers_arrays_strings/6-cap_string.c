@@ -2,10 +2,10 @@
 
 /**
  *cap_string- function is used capitalizes all words of a string
- *@a: value pointers
+ *@s: value pointers
  *Return: Return value pointers
  */
-char cap_string(char *s)
+char *cap_string(char *s)
 {
 	int i, j;
 	char e1[] = " \t\n,;.!?\"(){}";

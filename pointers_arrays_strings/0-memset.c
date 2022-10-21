@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- *_memset - reset function
+ *_memset - copies n characters
  *@s: value pointers
  *@b: value pointers
  *@n: value pointers
