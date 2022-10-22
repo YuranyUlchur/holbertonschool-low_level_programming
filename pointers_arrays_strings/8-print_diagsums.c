@@ -1,19 +1,27 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
- *_strpbrk -   string for any of a set of bytes
- *@a: value pointers
- *@size: value pointers
- *Return: Return value
+ *print_diagsums - function a string
+ *@a: variable pointer
+ *@size: variable pointer
+ *Return: variable pointer
  */
 void print_diagsums(int *a, int size)
 {
 	int i;
-	int j;
+	int s = 0;
+	int b = 0;
 
-	for (i = 0; i < n; i++)
+	for (i = 0; i < size; i++)
+		s += a[i * (size + 1)];
+	printf("%d, ", s);
+
+	i = size - 1;
+
+	while (i < (size * size) - (size - 1))
 	{
-		for (j = 0; j < n; j++)
-		{
-			a
-		}
+		b += a[i];
+		i += (size - 1);
+	}
+	printf("%d\n", b);
+}
