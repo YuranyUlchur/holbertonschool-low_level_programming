@@ -16,6 +16,8 @@ int main(int argc, char *argv[])
 	{
 		suma += atoi(argv[i]);
 		printf("%d", atoi(argv[i]));
+
+		return(0);
 	}
 
 	printf("Error\n");
