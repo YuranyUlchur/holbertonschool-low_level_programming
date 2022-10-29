@@ -1,28 +1,45 @@
-#include "main.h"
 #include <stdio.h>
+#include "main.h"
 /**
- *main- Entry point
- *@argc: value integer
- *@argv: pointers char
- *Return: Always 0
+ *main- function argc argv
+ *@argc: varible argc, argv
+ *@argv: variable argc, argv
+ *Return: zero
  */
 int main(int argc, char *argv[])
 {
-	int monedas = [25, 10, 5, 2, 1]
-	int i;
-	int cent
+	char coin[] = {25, 10, 5, 2, 1};
+	int n = 0;
+	int cont = 0;
+	int result = 0;
 
-
-	for (i = 1; i < count; i++)
-	{
-		/* code */
-	}
-	
-	if (argc < 2)
+	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	
+	result = atoi(argv[1]);
 
+	if (result <= 0)
+	{
+		printf("0\n");
+		return (0);
+	}
+
+	for (n = 0; coin[n] != '\0'; n++)
+	{
+		if (coin[n] > result)
+		{
+			continue;
+		}
+
+		while (coin[n] <= result)
+		{
+			result = result - coin[n];
+			cont++;
+		}
+	}
+
+	printf("%d\n", cont);
+	return (0);
 }
