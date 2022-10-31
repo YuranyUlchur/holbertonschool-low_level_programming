@@ -13,6 +13,11 @@ char *create_array(unsigned int size, char c)
 
 	puntero = malloc(size * sizeof(char));
 
+	if (puntero == NULL)
+	{
+		return (NULL);
+	}
+
 	for (i = 0; i < size; i++)
 	{
 		puntero[i] = c;
@@ -22,12 +27,6 @@ char *create_array(unsigned int size, char c)
 	{
 		return ('\0');
 	}
-	if(puntero[i] == '\0')
-	{
-		return(0);
-
-	}
-
 
 	return (puntero);
 }
