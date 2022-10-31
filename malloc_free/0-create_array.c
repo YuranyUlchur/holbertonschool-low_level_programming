@@ -22,7 +22,7 @@ char *create_array(unsigned int size, char c)
 	{
 		return ('\0');
 	}
-	if(size == '\0')
+	if(puntero[i] == '\0')
 	{
 		return(0);
 
