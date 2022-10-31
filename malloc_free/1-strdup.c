@@ -29,7 +29,7 @@ char *_strdup(char *str)
 
 	for (pi = 0; str[pi] != '\0'; pi++)
 	{
-		puntero[pi] = str[i];
+		puntero[pi] = str[pi];
 	}
 
 	puntero[pi] = '\0';
