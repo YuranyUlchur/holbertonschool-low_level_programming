@@ -22,12 +22,12 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	}
 	puntero = malloc(height * sizeof(int *));
-	if (**puntero != '\0')
+	if (puntero != '\0')
 	{
 		for (i = 0; i < height; i++)
 		{
-			puntero[i] = malloc(width * sizeof(int *));
-			if (*puntero[i] == '\0')
+			puntero[i] = malloc(width * sizeof(int));
+			if (puntero[i] == '\0')
 			{
 				for (; i >= 0; i--)
 				{
