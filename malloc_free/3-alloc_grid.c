@@ -8,7 +8,7 @@
  */
 int **alloc_grid(int width, int height)
 {
-	int **puntero;
+	int **p;
 	int i;
 	int traverse;
 	int traverse2;
@@ -21,19 +21,19 @@ int **alloc_grid(int width, int height)
 	{
 		return (NULL);
 	}
-	puntero = malloc(height * sizeof(int *));
-	if (puntero != '\0')
+	p = malloc(height * sizeof(int *));
+	if (p != '\0')
 	{
 		for (i = 0; i < height; i++)
 		{
-			puntero[i] = malloc(width * sizeof(int));
-			if (puntero[i] == '\0')
+			p[i] = malloc(width * sizeof(int));
+			if (p[i] == '\0')
 			{
 				for (; i >= 0; i--)
 				{
-					free(puntero[i]);
+					free(p[i]);
 				}
-				free(puntero);
+				free(p);
 				return ('\0');
 			}
 		}
@@ -41,10 +41,10 @@ int **alloc_grid(int width, int height)
 		{
 			for (traverse2 = 0; traverse2 < width; traverse2++)
 			{
-				puntero[traverse][traverse2] = 0;
+				p[traverse][traverse2] = 0;
 			}
 		}
-		return (puntero);
+		return (p);
 	}
 	return ('\0');
 }
