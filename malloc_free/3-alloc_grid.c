@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "main.h"
 /**
  *alloc_grid- Entry point
  *@width: value type integer
