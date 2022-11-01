@@ -1,32 +1,48 @@
 #include <stdio.h>
+#include "main.h"
+#include <stdlib.h>
 /**
- * malloc_checked -  function allocates memory using malloc
- *@s1: value pointers
- *@s2: value pointers
- *@i: value integer
- *Return: type void
+ **string_nconcat- function malloc and free
+ *@s1: variable malloc
+ *@s2: variable malloc
+ *@n: variable malloc
+ *Return: zero
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int * puntero;
-	int i1;
-	int i2;
+	unsigned int c;
+	unsigned int l;
+	char *a;
+	unsigned int i;
+	unsigned int j;
 
-
-	puntero = malloc(s1);
-
-	for(i1 = 0; i1 < s1 != '\0'; i1++)
+	if (s1 == NULL)
 	{
-
+		s1 = "";
 	}
-
-	for (i2 = 0; i2 < s2 != '\0'; i2++)
+	if (s2 == NULL)
 	{
-		s2[i2 + n] != '\0';
+		s2 = "";
 	}
-	
+	for (c = 0; s1[c] != '\0'; c++)
+	{}
+	for (l = 0; s2[l] != '\0'; l++)
+	{}
+	if (n > l)
+	{
+		a = malloc((c + l + 1) * sizeof(char));
+	}
+	else
+	{
+		a = malloc((c + n + 1) * sizeof(char));
+	}
+	if (a == NULL)
+		return (NULL);
+	for (i = 0; i < c; i++)
+		a[i] = s1[i];
+	for (j = 0; j < n && j < l; j++, i++)
+		a[i] = s2[j];
 
-
-	return(s1);
-	
+	a[i] = '\0';
+	return (a);
 }
