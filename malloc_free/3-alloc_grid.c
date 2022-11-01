@@ -22,19 +22,19 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	}
 	p = malloc(height * sizeof(int *));
-	if (p != '\0')
+	if (p != 0)
 	{
 		for (i = 0; i < height; i++)
 		{
 			p[i] = malloc(width * sizeof(int));
-			if (p[i] == '\0')
+			if (p[i] == 0)
 			{
 				for (; i >= 0; i--)
 				{
 					free(p[i]);
 				}
 				free(p);
-				return ('\0');
+				return (0);
 			}
 		}
 		for (traverse = 0; traverse < height; traverse++)
@@ -46,5 +46,5 @@ int **alloc_grid(int width, int height)
 		}
 		return (p);
 	}
-	return ('\0');
+	return (0);
 }
