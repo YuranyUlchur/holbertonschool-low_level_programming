@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- **str_concat- function concatenatesstrings
+ **str_concat- function concatenates strings
  *@s1: value pointers
  *@s2: value pinters
  *Return: Return pointers
