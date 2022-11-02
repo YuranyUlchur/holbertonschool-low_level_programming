@@ -3,10 +3,10 @@
 #include <stdlib.h>
 /**
  **string_nconcat- function malloc and free
- *@s1: variable malloc
- *@s2: variable malloc
- *@n: variable malloc
- *Return: zero
+ *@s1: value pointers
+ *@s2: value pointers
+ *@n: value integer
+ *Return: pointers
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
