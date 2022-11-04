@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stddef.h>
+#include <string.h>
 /**
  * is_palindrome-  function palindrome
  *@s: value pointers
@@ -6,21 +8,43 @@
  */
 int is_palindrome(char *s)
 {
-	int i;
-	int rev;
-	int aux = 0;
+	int longitudstring;
+	int i = 0;
 
-	for (i = 0; s[i] != '\0'; i++)
+	longitudstring = checkLenght(s);
+	if (checkPalindrome(s, i, longitudstring - 1))
 	{
+		return (1);
 	}
-	i--;
-	for (rev = i; rev >= 0; rev--)
+	else
 	{
-		if (s[aux] != s[rev])
-		{
-			return (0);
-		}
-		aux++;
+		return (0);
 	}
-	return (1);
+}
+
+int checkPalindrome(char *str, int l, int r)
+{
+	if (str == NULL || l < 0 || r < 0)
+	{
+		return (0);
+	}
+	if (l >= r)
+	{
+		return (1);
+	}
+	if (str[l] == str[r])
+	{
+		return (checkPalindrome(str, l + 1, r - 1));
+	}
+	return (0);
+}
+
+int checkLenght(char *s)
+{
+	if (*s != '\0')
+	{
+		s++;
+		return (checkLenght(s) + 1);
+	}
+	return (*s);
 }
