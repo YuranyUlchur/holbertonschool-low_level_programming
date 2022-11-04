@@ -4,7 +4,7 @@
 /**
  * is_palindrome-  function palindrome
  *@s: value pointers
- *Return: return integer
+ *Return: return interger
  */
 int is_palindrome(char *s)
 {
@@ -21,7 +21,13 @@ int is_palindrome(char *s)
 		return (0);
 	}
 }
-
+/**
+ * checkPalindrome -  function palindrome
+ *@str: value pointers
+ *@l: value integer
+ *@r: value integer
+ *Return: return integer
+ */
 int checkPalindrome(char *str, int l, int r)
 {
 	if (str == NULL || l < 0 || r < 0)
@@ -38,7 +44,11 @@ int checkPalindrome(char *str, int l, int r)
 	}
 	return (0);
 }
-
+/**
+ * checkLenght - funcrion longitud the palindrome
+ *@s: value pointers
+ *Return: return integer
+ */
 int checkLenght(char *s)
 {
 	if (*s != '\0')
