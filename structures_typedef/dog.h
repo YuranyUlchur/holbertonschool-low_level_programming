@@ -1,5 +1,5 @@
-#ifndef dog
-#define dog
+#ifndef DOG_H
+#define DOG_H
 #include <stdio.h>
 
 /**
@@ -8,13 +8,16 @@
  *@age: value type float  age
  *@owner: value pointer name
  */
+
 struct dog
+
 {
 	char *name;
 
 	float age;
 
 	char *owner;
-	#endif
 };
+typedef struct dog dog_t;
 
+#endif
