@@ -1,7 +1,9 @@
+#ifndef dog
+#define dog
 #include <stdio.h>
 
 /**
- * dog - Entry point
+ * struct dog - Entry point
  *@name: value pointer name
  *@age: value type float  age
  *@owner: value pointer name
@@ -13,4 +15,6 @@ struct dog
 	float age;
 
 	char *owner;
+	#endif
 };
+
