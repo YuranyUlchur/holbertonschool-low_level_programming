@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- * print_name - function name
- * @name: value pointer
- * @f: value pointer
+ * print_name - functionn a name
+ * @name: name value pointers
+ * @f: function value pointers
  *
  */
 
