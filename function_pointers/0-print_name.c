@@ -4,8 +4,8 @@
 
 
 /**
- * print_name - function print name
- * 
+ *print_name - function  name
+ *
  *@name: value pointer
  *@f: value pointer
  *
