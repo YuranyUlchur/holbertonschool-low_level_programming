@@ -1,13 +1,11 @@
 #include "function_pointers.h"
 #include <stddef.h>
-#include  <stdio.h>
-
+#include <stdio.h>
 
 /**
- *print_name - function  name
- *
- *@name: value pointer
- *@f: value pointer
+ * print_name - function name
+ * @name: value pointer
+ * @f: value pointer
  *
  */
 
@@ -18,5 +16,4 @@ void print_name(char *name, void (*f)(char *))
 	{
 		(*f)(name);
 	}
-
 }
