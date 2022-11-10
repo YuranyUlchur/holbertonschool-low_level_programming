@@ -69,6 +69,6 @@ int op_div(int a, int b)
 int op_mod(int a, int b)
 {	int remainder;
 
-	remainder = a % d;
+	remainder = a % b;
 	return (remainder);
 }
