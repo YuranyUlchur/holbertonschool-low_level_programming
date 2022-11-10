@@ -5,16 +5,16 @@
 /**
  * print_numbers - function that prints numbers
  * @n: value the const unsigned integer
- * @separator: value pointers
+ * @separator: value pointer
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	va_list numbers;
-	unsigned int i = 0;
+	unsigned int i;
 
 	va_start(numbers, n);
 
-	while (i < n)
+	for (i = 0; i < n; i++)
 	{
 		if (separator != NULL && i < (n - 1))
 		{
@@ -25,7 +25,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		{
 			printf("%d", va_arg(numbers, int));
 		}
-		i++;
 	}
 	va_end(numbers);
 
