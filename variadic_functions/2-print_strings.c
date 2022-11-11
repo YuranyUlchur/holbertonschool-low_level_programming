@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * print_strings - function  that prints strings
+ * print_numbers - function that prints numbers
  * @n: value the const unsigned integer
  * @separator: value pointer
  */
