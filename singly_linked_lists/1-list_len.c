@@ -9,10 +9,9 @@
 size_t list_len(const list_t *h)
 {
 	size_t i = 0;
-	list_t node = *h;
-	while (node != NULL)
+	while (h != NULL)
 	{
-		node = node->next;
+		h = h->next;
 		i++;
 	}
 	return (i);
