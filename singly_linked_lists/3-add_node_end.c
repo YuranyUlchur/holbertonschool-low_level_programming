@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * *add_node - function new node at the beginning of a list.
+ * *add_node_end - function that adds a new node at the end of a list.
  * @head: pointer const lis_t
  * @str: const char pointer
  * Return: prints all the elements of a list_t list.
