@@ -3,7 +3,7 @@
 
 /**
  * binary_to_uint -  function that converts a binary number
- * @b: pointer const lis_t
+ * @b: pointer const char
  * Return: unsigned integer
  */
 

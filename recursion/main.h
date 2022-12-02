@@ -12,7 +12,6 @@ int raiz(int n, int iterador);
 int is_prime_number(int n);
 int prime (int n, int iterador);
 int is_palindrome(char *s);
-int polindrome(int n);
 int checkLenght(char *s);
 int checkPalindrome(char *str, int l, int r);
 
