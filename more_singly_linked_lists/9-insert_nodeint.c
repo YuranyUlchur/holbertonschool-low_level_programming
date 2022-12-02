@@ -1,36 +1,67 @@
 #include "lists.h"
 
 /**
- * sum_listint -  function that returns the sum of all the data (n)
+ * *add_nodeint - function adds a new node
  * @head: pointer listint_t
- * Return: return integer
+ * @n: const interger
+ * Return: return listint_t
+ */
+listint_t *add_nodeint(listint_t **head, const int n)
+{
+
+	listint_t *node;
+
+	node = (listint_t *)malloc(sizeof(listint_t));
+
+	if (!node)
+		return (NULL);
+
+	node->n = n;
+	node->next = NULL;
+	if (!head)
+		head = &node;
+	if (!(*head))
+		*head = node;
+	else
+	{
+		node->next = *head;
+		*head = node;
+	}
+	return (node);
+}
+
+/**
+ * insert_nodeint_at_index - function that inserts a new node
+ * @head: pointer listint_t
+ * @idx:  is the index of the list where the new node
+ * @n: integer
+ * Return: return listint_t
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *node, *current = *head;
+	listint_t *node, *aux = *head;
+	unsigned int i = 0;
 
+	if (idx == 0)
+		return (add_nodeint(head, n));
 
 	node = malloc(sizeof(listint_t));
 
-	if (current == NULL)
+	if (node == NULL)
+		return (NULL);
+	node->n = n;
+	while (i < idx - 1)
 	{
-		return current = node;
+		aux = aux->next;
+		i++;
 	}
-	else if (n == 0)
+	if (!aux)
 	{
-		node->next = current;
-		current = node;
-		return (current);
+		free(node);
+		return (NULL);
 	}
-	else
-	{
-		node->idx = current;
-		for (int i = 0; i < n - 1; i++)
-		{
-			idx = idx->next;
-		}
-		node->next = idx->next;
-		idx->next = node;
-	}
-	return (current);
+	node->next = aux->next;
+	aux->next = node;
+
+				return (node);
 }
