@@ -5,7 +5,7 @@
  *@s: value pointers
  *Return: Return value i
  */
-int _strlen(char *s)
+int _strlen( const char *s)
 {
 	int i;
 
