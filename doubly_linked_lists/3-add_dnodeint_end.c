@@ -1,32 +1,32 @@
 #include "lists.h"
 
 /**
- * add_nodeint_end - function hat adds a new node
+ * add_dnodeint_end - function hat adds a new node
  * @head: pointer const listint_t
  * @n: const integer
  * Return: prints all the elements of a list_t list.
  */
 
-listint_t *add_nodeint_end(listint_t **head, const int n)
+dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
-	listint_t *node, *last = *head;
+	dlistint_t *node, *last = *head;
 
-	node = malloc(sizeof(listint_t));
-
-	if (!node)
+	node = malloc(sizeof(dlistint_t));
+	if (node == NULL)
 		return (NULL);
-
 	node->n = n;
 	node->next = NULL;
-
-	if ((*head) == NULL)
+	if (*head)
 	{
-		(*head) = node;
-		return (node);
+		while (last->next != NULL)
+			last = last->next;
+		node->prev = last;
+		last->next = node;
 	}
-	while (last->next != NULL)
-		last = last->next;
-	last->next = node;
-
+	else
+	{
+		node->prev = NULL;
+		*head = node;
+	}
 	return (node);
 }
