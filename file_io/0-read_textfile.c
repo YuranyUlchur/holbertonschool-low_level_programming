@@ -8,23 +8,28 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd;
-	char buf[1000];
-	ssize_t len = letters;
+	int fd, read_file, write_file;
+	char *buf;
 
-	if (filename)
-	{
+	if (!filename)
+		return (0);
 
-		fd = open(filename, O_RDONLY);
+	fd = open(filename, O_RDONLY);
 
-		if (filename == NULL)
-			return (0);
+	if (fd == -1)
+		return (0);
+	buf = malloc(sizeof(char) * letters + 1);
+	if (!buf)
+		return (0);
+	read_file = read(fd, buf, letters);
+	if (read_file == -1)
+		return (0);
+	buf[letters] = '\0';
+	write_file = write(STDOUT_FILENO, buf, read_file);
+	if (write_file == -1)
+		return (0);
 
-		while ((letters = read(fd, buf, len)))
-			write(1, &fd, 1);
-		close(fd);
-
-		return (len);
-	}
-	return (0);
+	free(buf);
+	close(fd);
+	return (write_file);
 }
