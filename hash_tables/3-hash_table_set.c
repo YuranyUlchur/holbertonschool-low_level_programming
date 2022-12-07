@@ -9,7 +9,13 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	char *value_dup = strdup(value);
+	char *value_dup = malloc(strlen(value));
+
+	if (!value_dup || !value)
+	{
+		return (0);
+	}
+	value_dup = strdup(value);
 
 	if (!*ht->array || !key)
 	{
