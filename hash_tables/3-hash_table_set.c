@@ -19,9 +19,15 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (!value_dup || !value)
 	{
 		free(value_dup);
+		return (0);
+	}
+	if (!*ht->array || !key)
+	{
+		free(value_dup);
 		return(0);
 	}
 	
+
 	index = hash_djb2((const unsigned char *)key_dup) % (ht->size);
 	node = malloc(sizeof(hash_node_t));
 
