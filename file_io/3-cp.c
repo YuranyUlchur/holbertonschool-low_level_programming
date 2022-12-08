@@ -1,27 +1,24 @@
 #include "main.h"
 
 /**
- * create_file -  function that creates a file.
- *@text_content: variable char
- *@filename: pointer const char
- *Return: ssize_t
+ * main - program that copies the content of a file to another file.
+ *@argc: variable integer
+ *@argv: matriz char
+ *Return: integer
  */
 int main(int argc, char **argv)
 {
 	int fd = 0, fd_to = 0, close_status = 0, i;
 	size_t bytes = 1;
-	char *file_from = NULL, file_to = NULL;
-	char buff[1024];
+	char *file_from = NULL, file_to = NULL, buff[1024];
 
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file file_to\n");
 		exit(97);
 	}
-
 	file_from = argv[1];
 	file_to = argv[2];
-
 	fd = open(file_from, O_RDONLY);
 	if (fd == -1)
 	{
@@ -39,7 +36,6 @@ int main(int argc, char **argv)
 	{
 		buff[i] = '\0';
 	}
-
 	while (bytes)
 	{
 		bytes = read(fd, buff, 1024);
@@ -51,6 +47,5 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Error: can't read from file %d\n", fd_to);
 		exit(100);
 	}
-
 	return (0);
 }
