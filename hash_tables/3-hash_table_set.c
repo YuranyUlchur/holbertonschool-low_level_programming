@@ -1,4 +1,5 @@
 #include "hash_tables.h"
+#include <stdio.h>
 
 /**
  * hash_table_set- function that adds an element to the hash table.
@@ -23,19 +24,16 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	if (!ht)
 	{
-		return(0);
+		return (0);
 	}
-	
 
 	index = hash_djb2((const unsigned char *)key_dup) % (ht->size);
 	node = malloc(sizeof(hash_node_t));
 
 	node->key = key_dup;
 	node->value = value_dup;
+	value_dup = NULL;
 	node->next = NULL;
-
-	if (ht->array[index])
-		node->next = ht->array[index];
 
 	ht->array[index] = node;
 
