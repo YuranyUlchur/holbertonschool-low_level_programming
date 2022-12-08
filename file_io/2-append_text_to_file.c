@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * create_file -  function that creates a file.
+ * append_text_to_file -  function that appends text at the end of a file.
  *@text_content: variable char
  *@filename: pointer const char
- *Return: ssize_t
+ *Return: int
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
