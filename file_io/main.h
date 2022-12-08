@@ -1,5 +1,5 @@
-#ifndef FILE
-#define FILE
+#ifndef FILE_HASH
+#define FILE_HASH
 
 #include <sys/types.h>
 #include <sys/stat.h>
