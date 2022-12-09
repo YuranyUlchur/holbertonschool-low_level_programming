@@ -35,8 +35,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	value_dup = NULL;
 	node->next = NULL;
 
-	if (ht->array[index] && index == 0)
+	if (ht->array[index] && strcmp(ht->array[index]->key, key_dup) != 0)
+	{
 		node->next = ht->array[index];
+	}
 	ht->array[index] = node;
 
 	return (1);
