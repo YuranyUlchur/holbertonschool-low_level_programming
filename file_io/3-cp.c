@@ -5,7 +5,7 @@
  * @stderr: variable int
  * @filename: variable char
  * @fd: variable int
- *Return: void
+ * Return: void
  */
 
 void check_error(int stderr, char *filename, int fd)
@@ -34,16 +34,16 @@ void check_error(int stderr, char *filename, int fd)
 
 /**
  * main - program that copies the content of a file to another file.
- * @argc: variable int
- * @argv: matriz char
- * Return: int /
+ *@argc: variable int
+ *@argv: matriz char
+ *Return: int
  */
 
 int main(int argc, char **argv)
 {
 	int fd = 0, fd_to = 0, close_status = 0, i;
 	ssize_t bytes = 1, bytes_write = 1;
-	char file_from = NULL, *file_to = NULL, buff[1024];
+	char *file_from = NULL, *file_to = NULL, buff[1024];
 
 	if (argc != 3)
 	{
