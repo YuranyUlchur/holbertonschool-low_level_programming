@@ -18,7 +18,7 @@ void hash_table_print(const hash_table_t *ht)
 
 	for (index = 0; index < ht->size; index++)
 	{
-		if (ht->array[index])
+		while (ht->array[index])
 		{
 			if (ht->array[index]->key)
 			{
@@ -29,6 +29,7 @@ void hash_table_print(const hash_table_t *ht)
 					   ht->array[index]->value);
 				comma = ", ";
 			}
+			ht->array[index] = ht->array[index]->next;
 		}
 	}
 	if (aux == 0)
