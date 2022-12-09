@@ -11,6 +11,11 @@ void hash_table_print(const hash_table_t *ht)
 	int aux = 0;
 	char *k = "{", *comma = "";
 
+	if (ht == NULL)
+	{
+		return;
+	}
+
 	for (index = 0; index < ht->size; index++)
 	{
 		if (ht->array[index])
