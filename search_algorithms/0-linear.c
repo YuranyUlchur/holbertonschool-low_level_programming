@@ -1,5 +1,6 @@
 #include "search.h"
 #include <stdio.h>
+
 /**
  * linear_search-  function Linear search algorithm
  *@array: value pointers
@@ -7,9 +8,9 @@
  *@value: value integer
  *Return: return interger
  */
+
 int linear_search(int *array, size_t size, int value)
 {
-
 	size_t i;
 
 	if (!array || !value)
